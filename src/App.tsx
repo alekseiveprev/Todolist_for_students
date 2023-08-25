@@ -12,5 +12,16 @@ export default function App() {
 }
 
 function Todolist() {
-  return <div>TODOLIST </div>;
+  return (
+    <div>
+      <h3> What to learn</h3>
+      <div>
+        <input />
+        <button> + </button>
+      </div>
+      <ul>
+        <li><input type="text" /></li>
+      </ul>
+    </div>
+  );
 }
