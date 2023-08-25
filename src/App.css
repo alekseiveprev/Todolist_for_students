@@ -1,0 +1,14 @@
+h1,
+p {
+  font-family: Lato;
+}
+
+.App {
+  padding: 30px;
+  /*  display: flex; */
+  /*  background-color: blue; */
+}
+
+.App > div {
+  margin-right: 50px;
+}

@@ -1,27 +1,27 @@
 import * as React from 'react';
-import './style.css';
+import './App.css';
+import { TaskType, Todolist } from './Todolist';
 
 export default function App() {
+  let tasks1: Array<TaskType> = [
+    { id: 1, title: 'CSS', isDone: true },
+    { id: 2, title: 'JS', isDone: true },
+    { id: 3, title: 'React', isDone: false },
+  ];
+
+  let tasks2: Array<TaskType> = [
+    { id: 1, title: 'Terminator', isDone: true },
+    { id: 2, title: 'XXX', isDone: false },
+    { id: 3, title: 'Jentelmens of fortune', isDone: true },
+  ];
+
   return (
-    <div>
+    <div className="App">
       {/* <h1>Hello StackBlitz!</h1>
       <p>Start editing to see some magic happen :)</p> */}
-      <Todolist />
-    </div>
-  );
-}
-
-function Todolist() {
-  return (
-    <div>
-      <h3> What to learn</h3>
-      <div>
-        <input />
-        <button> + </button>
-      </div>
-      <ul>
-        <li><input type="text" /></li>
-      </ul>
+      <Todolist title="What to learn" tasks={tasks1} />
+      <Todolist title="Movies" tasks={tasks2} />
+      {/* <Todolist title="Songs" /> */}
     </div>
   );
 }
