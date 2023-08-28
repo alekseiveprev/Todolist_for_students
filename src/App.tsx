@@ -4,26 +4,16 @@ import './App.css';
 import { TaskType, Todolist } from './Todolist';
 
 export default function App() {
-  let initTasks: Array<TaskType> = [
+  let [tasks, setTasks] = useState([
     { id: 1, title: 'CSS', isDone: true },
     { id: 2, title: 'JS', isDone: true },
     { id: 3, title: 'React', isDone: false },
     { id: 4, title: 'Redux', isDone: false },
-  ];
-
-  /*  let arr = useState(initTasks);
-  let tasks = arr[0];
-  let setTasks = arr[1]; */
-  let [tasks, setTasks] = useState(initTasks);
+  ]);
 
   function removeTask(id: number) {
     let filteredTasks = tasks.filter((t) => {
       return t.id !== id;
-      /*   if (t.id !== id) {
-        return true;
-      } else {
-        return false;
-      } */
     });
     setTasks(filteredTasks);
   }
