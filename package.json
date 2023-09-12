@@ -3,10 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "@types/uuid": "^9.0.3",
+    "add": "^2.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "@types/react": "18.2.21",
-    "@types/react-dom": "18.2.7"
+    "uuid": "^9.0.1",
+    "yarn": "^2.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
