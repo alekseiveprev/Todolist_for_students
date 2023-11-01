@@ -50,11 +50,18 @@ export default function App() {
   ]; */
 
   function changeTaskStatus(id: string, isDone: boolean) {
-    let task = tasks.find((t) => t.id === id);
-    if (task) {
-      task.isDone === isDone;
+    //let task = tasks.find((t) => t.id === id);
+    const updatedTasks = tasks.map((task) => {
+      if (task.id === id) {
+        task.isDone = isDone;
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
+    /*  if (task) {
+      task.isDone = isDone;
       setTasks([...tasks]);
-    }
+    } */
   }
 
   return (
