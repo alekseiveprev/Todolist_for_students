@@ -31,7 +31,6 @@ export default function App() {
     setTasks(newTasks);
   }
 
-  
   function changeFilter(value: FilterValuesType) {
     setFilter(value);
   }
@@ -50,6 +49,14 @@ export default function App() {
     { id: 3, title: 'Jentelmens of fortune', isDone: true },
   ]; */
 
+  function changeTaskStatus(id: string, isDone: boolean) {
+    let task = tasks.find((t) => t.id === id);
+    if (task) {
+      task.isDone === isDone;
+      setTasks([...tasks]);
+    }
+  }
+
   return (
     <div className="App">
       <Todolist
@@ -58,6 +65,7 @@ export default function App() {
         removeTask={removeTask}
         changeFilter={changeFilter}
         addTask={addTask}
+        changeTaskStatus={changeTaskStatus}
       />
       {/*  <Todolist title="Movies" tasks={tasks2} /> */}
       {/* <Todolist title="Songs" /> */}
