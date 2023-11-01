@@ -31,6 +31,7 @@ export default function App() {
     setTasks(newTasks);
   }
 
+  
   function changeFilter(value: FilterValuesType) {
     setFilter(value);
   }
